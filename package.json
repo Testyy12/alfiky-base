@@ -17,7 +17,7 @@
     "@hapi/boom": "^10.0.1",
     "@neoxr/wb": "^4.7.11",
     "@vitalets/google-translate-api": "^9.2.0",
-    "@whiskeysockets/baileys": "npm:@itsukichan/baileys@^7.1.7",
+    "@whiskeysockets/baileys": "npm:@itsukichan/baileys@^7.1.9",
     "alfiky-pairing": "^1.0.0",
     "archiver": "^7.0.1",
     "awesome-phonenumber": "^2.64.0",
