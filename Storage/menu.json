@@ -1,0 +1,10 @@
+{
+  "download": {
+    "category": "Tools",
+    "description": "Download berbagai file"
+  },
+  "get": {
+    "category": "Tools",
+    "description": "Menggunakan methode GET untuk mendapatkan response dari url"
+  }
+}
