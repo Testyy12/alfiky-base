@@ -1,0 +1,136 @@
+{
+  "users": {
+    "628812258855@s.whatsapp.net": {
+      "banned": false,
+      "lastBanned": 0
+    },
+    "120363318950025538@newsletter": {
+      "banned": false,
+      "lastBanned": 0
+    },
+    "6282181669356@s.whatsapp.net": {
+      "banned": false,
+      "lastBanned": 0
+    },
+    "120363213616693287@newsletter": {
+      "banned": false,
+      "lastBanned": 0
+    },
+    "6285785313072@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6285124824509@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6285210868214@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "120363383378176783@newsletter": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6281268221923@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "212693186679@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6282141065910@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6282231215288@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6285704830255@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6285784096589@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6289517732167@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    },
+    "6281232921965@s.whatsapp.net": {
+      "status_deposit": false,
+      "saldo": 0
+    }
+  },
+  "chats": {
+    "120363374007185237@g.us": {
+      "isBanned": false
+    },
+    "120363318950025538@newsletter": {
+      "isBanned": false
+    },
+    "6282181669356@s.whatsapp.net": {
+      "isBanned": false
+    },
+    "120363213616693287@newsletter": {
+      "isBanned": false
+    },
+    "212693186679@s.whatsapp.net": {
+      "antispam": true
+    }
+  },
+  "database": {},
+  "groups": {
+    "120363247654668913@g.us": {
+      "antilink": false,
+      "antilink2": false,
+      "welcome": false,
+      "mute": false,
+      "simi": false,
+      "blacklistjpm": false
+    }
+  },
+  "game": {},
+  "settings": {
+    "anticall": false,
+    "autobio": false,
+    "autoread": false,
+    "autopromosi": false,
+    "autotyping": false,
+    "readsw": false,
+    "owneroffmode": false
+  },
+  "others": {},
+  "sticker": {},
+  "spam": {
+    "628812258855@s.whatsapp.net": {
+      "count": 1,
+      "lastspam": 0
+    },
+    "120363318950025538@newsletter": {
+      "count": 1,
+      "lastspam": 0
+    },
+    "6282181669356@s.whatsapp.net": {
+      "count": 8,
+      "lastspam": 0
+    },
+    "120363213616693287@newsletter": {
+      "count": 1,
+      "lastspam": 0
+    }
+  },
+  "antispam": {
+    "6285124824509@s.whatsapp.net": {
+      "lastMessageTime": 1742293695015,
+      "warningCount": 0
+    },
+    "6285785313072@s.whatsapp.net": {
+      "lastMessageTime": 1742293694596,
+      "warningCount": 5
+    }
+  }
+}
