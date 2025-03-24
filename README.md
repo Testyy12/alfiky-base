@@ -81,7 +81,7 @@ npm start
 
 ## 🔌 Struktur Plugin  
 
-Alfiky ID mendukung **tiga format plugin** berikut:  
+Alfiky ID mendukung **dua tipe plugin** berikut:  
 
 ### **📌 ESM (ECMAScript Module)**  
 
@@ -89,57 +89,16 @@ example.mjs
 
 ```js
 
-import axios from 'axios';
-
-let handler = async (m, {data}) => {
-    m.reply("Hola");
+export default {
+    command: "help",
+    alias: ["bantuan", "menu"],
+    run: async (m, data) => {
+        await m.reply("📜 Ini daftar perintah...");
+    }
 };
 
-handler.command = /^(esm)$/i;
-
-export default handler;
 ```
 
-### **📌 TS (TypeScript)**  
-
-example.ts
-
-```ts
-
-
-
-async function namafungsi(m: any, data: any) {
-    const { command, args } = data;
-    
-    m.reply('hiii')
-}
-
-// Define plugin properties
-namafungsi.command = 'weather';
-namafungsi.help = '.weather [location]';
-namafungsi.tags = ['utility'];
-namafungsi.desc = 'Get weather information for a specified location';
-
-export default namafungsi;
-
-or
-
-/**
- * Plugin TypeScript sederhana
- */
-function handler(m: any, data: any) {
-  return (async () => {
-    await m.reply("Hola");
-  })();
-}
-
-// Definisikan perintah yang didukung
-handler.command = 'ts';
-
-// Export handler sebagai default export
-export default handler;
-
-```
 
 ### **📌 CJS (CommonJS)** 
 
@@ -149,32 +108,14 @@ example.js
 
 const axios = require('axios')
 
-function namafungsi(m, data) {
-    // Access the command and args from data
-    const { command, args } = data;
-    
-    m.reply('hii')
-}
-
-// Define plugin properties
-namafungsi.command = 'hello'; // Command trigger
-namafungsi.help = '.hello [name]'; // Help text
-namafungsi.tags = ['greeting']; // Plugin category/tags
-namafungsi.desc = 'Responds with a greeting message'; // Description
-
-module.exports = namafungsi;
-
-or
-
-const axios = require('axios')
-
-let handler = async (m, {data}) => {
-    m.reply("Hola");
+module.exports = {
+    command: "help",
+    alias: ["bantuan", "menu"],
+    run: async (m, data) => {
+        await m.reply("📜 Ini daftar perintah...");
+    }
 };
 
-handler.command = ["cjs"];
-
-module.exports = handler;
 ```
 
 Note: mungkin tidak harus sesuai dengan yang diatas. seperti plugins pada umumnya juga bisa
@@ -196,7 +137,7 @@ Bot ini menggunakan **LowDB** sebagai penyimpanan database yang ringan dan cepat
 |:---------:|:---------------------:|:-----------------------:|
 | <img src="https://avatars.githubusercontent.com/u/97213948?v=4" width="80" style="border-radius:50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" /> | **Felice-MD & Zervidas**       | 🛠️ **Core Developer**    |
 | <img src="https://avatars.githubusercontent.com/u/198647531?v=4" width="80" style="border-radius:50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" /> | **Alfiann**      | 🎨 **System Architect**  |
-| <img src="https://avatars.githubusercontent.com/u/192673517?v=4" width="80" style="border-radius:50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" /> | **itsukichan**      | 🚀 **Baileys Creator**   |
+| <img src="https://avatars.githubusercontent.com/u/192673517?v=4" width="80" style="border-radius:50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" /> | **Fizzxydev**      | 🚀 **Baileys Creator**   |
 
 </div>
 
