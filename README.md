@@ -33,7 +33,7 @@ Jika ada pertanyaan atau ingin berdiskusi, silakan hubungi saya di [WhatsApp](ht
 ## 🛠️ Perubahan yang Saya Lakukan  
 
 ### ✅ **Penambahan Fitur:**  
-- **Sistem Plugin Modular** *(CJS, ESM, TS)*
+- **Sistem Plugin Modular** *(CJS, ESM)*
 - **Handler.js** untuk memproses pesan lebih rapi  
 - **Auto-Reconnect & Session Persistence**  
 - **Command Dinamis** dengan metode load per plugin  
