@@ -246,14 +246,12 @@ async function startBot() {
         // Group metadata cache
         const groupCache = new NodeCache({stdTTL: 5 * 60, useClones: false});
         
-        // Create store
-        const store = makeInMemoryStore({});
-        store.readFromFile('./store.json');
-        
-        // Save store periodically
-        setInterval(() => {
-            store.writeToFile('./store.json');
-        }, 10000);
+        const store = makeInMemoryStore({
+    logger: pino().child({
+      level: 'silent', stream: 'store'
+    })
+  })
+
         
         // Initialize WhatsApp connection
         logger.info("Creating WhatsApp connection...");
@@ -346,15 +344,14 @@ async function startBot() {
         // Handle incoming messages
         wa.ev.on('messages.upsert', async (chatUpdate) => {
             try {
-                const mek = chatUpdate.messages[0];
-                if (!mek.message) return;
-                mek.message = mek.message.ephemeralMessage ? mek.message.ephemeralMessage.message : mek.message;
-                
-                if (!wa.public && !isOwners.includes(mek.key.participant || mek.key.remoteJid) && !mek.key.fromMe && chatUpdate.type === "notify") return;
+                const mek = chatUpdate.messages[0]
+        if (!mek.message) return
+        mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message: mek.message
+                if (!wa.public && !isOwners) {
+                    return;
+                    }
                 
                 const m = smsg(wa, mek, store);
-                logger.debug(`Message received from: ${m.pushName || 'Unknown'} (${m.sender.split('@')[0]})`);
-                
                 require("./case.js")(wa, m, chatUpdate, store);
             } catch (err) {
                 logger.error(`Error in messages.upsert event: ${err.message}`, err);
@@ -407,7 +404,7 @@ async function startBot() {
         };
         
         // Set public mode
-        wa.public = true;
+        wa.public = false;
 
         // Serialize message
         wa.serializeM = (m) => smsg(wa, m, store);
